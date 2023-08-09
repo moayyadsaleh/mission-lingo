@@ -1,0 +1,125 @@
+/* styles.css */
+
+/* Reset default margin and padding for the entire page */
+body, ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    direction: rtl;
+  }
+  
+  h1 {
+    padding: 10px 0; /* Add padding to the top and bottom */
+  }
+  body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Style the navigation bar */
+  nav {
+    background-color:#000080;
+    color: #F5F5DC;
+    padding: 10px 0;
+  }
+  
+  /* Center the navigation items horizontally */
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  /* Style each navigation item */
+  li {
+    margin: 0 15px;
+  }
+  
+  /* Add styling to the links */
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Style the navigation icon */
+  i {
+    margin-right: 5px;
+  }
+
+  .fixed-footer {
+    background-color:#000080;
+    color: #D2B48C;
+    padding: 1px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .fixed-footer a:hover {
+    color: #ffc107; /* Change the color on hover */
+  }
+
+  .article-title {
+    text-align: right;
+    text-align: right;
+    padding: 5px 0; /* Add padding to the top and bottom */
+  }
+  
+  .article-description {
+    text-align: right;
+  }
+  
+  .article-link {
+    text-align: left; /* Keep the link aligned to the left */
+    text-align: right;
+    padding: 5px 0; /* Add padding to the top and bottom */
+  }
+
+  .article a {
+    color: #000080;
+    text-decoration: none; /* Optional: Remove underline */
+  }
+  .article .read-more {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #000080; /* Background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    /* Additional styles */
+    margin-top: 10px; /* Add some space above the link */
+    font-size: 14px; /* Adjust the font size */
+  }
+
+  .zoom-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #000080; /* Background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    /* Additional styles */
+    margin-top: 10px; /* Add some space above the link */
+    font-size: 14px; /* Adjust the font size */
+    cursor: pointer; /* Set the cursor style to pointer */
+  }
+
+
+  
+  .articles {
+    max-height: calc(100vh - 150px); /* Adjust the value based on your design */
+    overflow-y: auto;
+  max-height: calc(100vh - 150px); /* Adjust the value based on your design */
+    overflow-y: auto;
+    margin-bottom: 50px; /* Add space for the fixed footer */
+    padding: 10px; /* Add your desired padding value */
+    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+    margin-bottom: 20px; /* Add some space between articles */
+  }
+
+ 

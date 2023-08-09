@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ... your head content ... -->
+  <link rel="stylesheet" href="styles.css">
+  <%- include('partials/header') %>
+</head>
+<body>
+  <h1>Learning Materials</h1>
+  <div class="headlines">
+    <% for (const headline of headlines) { %>
+      <div class="headline">
+        <h2><%= headline %></h2>
+      </div>
+    <% } %>
+  </div>
+  <%- include('partials/footer') %>
+</body>
+</html>
