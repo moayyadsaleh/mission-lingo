@@ -7,19 +7,24 @@
 <body>
   <%- include('partials/header') %>
 
-  <h1>Articles: المقالات</h1>
+  <p class="english">
+    Welcome to the Advanced Arabic News Reading Exercise! Below, you will find 10 authentic Arabic news articles sourced directly from reputable news outlets. Each article includes a title and its corresponding content. As you read through, feel free to highlight any words or text you may need translation for. You can simply right-click your mouse and select "Translate Selection to English" to access translations. Please note that the news articles are updated every 15 minutes when you hit refresh. This exercise is designed for individuals at Level 2 and above on the Interagency Language Roundtable (ILR) scale. You can also zoom in or out as needed to ensure a comfortable reading experience. Immerse yourself in the world of Arabic news and enhance your language skills. Happy reading!
+  </p>
+
+  <div class="zoom-buttons-container" id="draggable">
+    <button class="zoom-button" id="zoom-in">Zoom In</button>
+    <button class="zoom-button" id="zoom-out">Zoom Out</button>
+  </div>
+
   <div class="articles">
     <% articles.results.forEach(article => { %>
       <div class="article">
-        <h2 class="zoomable" data-target="article-title"><%= article.title %></h2>
-        <p class="zoomable" data-target="article-content"><%= article.content %></p>
-        <div>
-          <button class="zoom-button" id="zoom-in">Zoom In</button>
-          <button class="zoom-button" id="zoom-out">Zoom Out</button>
-        </div>
+        <h2 class="zoomable" data-target="article-title <%= article.language %>"><%= article.title %></h2>
+        <p class="zoomable" data-target="article-content <%= article.language %>"><%= article.content %></p>
       </div>
     <% }); %>
   </div>
+
   <%- include('partials/footer') %>
 </body>
 <script src="script.js"></script>

@@ -1,125 +1,169 @@
-/* styles.css */
-
 /* Reset default margin and padding for the entire page */
-body, ul {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    direction: rtl;
-  }
-  
-  h1 {
-    padding: 10px 0; /* Add padding to the top and bottom */
-  }
-  body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+/* Reset some default styles for consistent rendering */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
 
-  /* Style the navigation bar */
-  nav {
-    background-color:#000080;
-    color: #F5F5DC;
-    padding: 10px 0;
-  }
-  
-  /* Center the navigation items horizontally */
-  ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  /* Style each navigation item */
-  li {
-    margin: 0 15px;
-  }
-  
-  /* Add styling to the links */
-  a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  /* Style the navigation icon */
-  i {
-    margin-right: 5px;
-  }
+/* Set a background color and text color for the whole page */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
 
-  .fixed-footer {
-    background-color:#000080;
-    color: #D2B48C;
-    padding: 1px 0;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+/* Style for the main title */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
 
-  .fixed-footer a:hover {
-    color: #ffc107; /* Change the color on hover */
-  }
+/* Style for the article title */
+.h2.zoomable {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-  .article-title {
-    text-align: right;
-    text-align: right;
-    padding: 5px 0; /* Add padding to the top and bottom */
-  }
-  
-  .article-description {
-    text-align: right;
-  }
-  
-  .article-link {
-    text-align: left; /* Keep the link aligned to the left */
-    text-align: right;
-    padding: 5px 0; /* Add padding to the top and bottom */
-  }
+/* Style for the article content */
+.p.zoomable {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
 
-  .article a {
-    color: #000080;
-    text-decoration: none; /* Optional: Remove underline */
-  }
-  .article .read-more {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #000080; /* Background color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    /* Additional styles */
-    margin-top: 10px; /* Add some space above the link */
-    font-size: 14px; /* Adjust the font size */
-  }
+/* Style for the zoom buttons container */
+.zoom-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 5px;
+}
 
-  .zoom-button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #000080; /* Background color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    /* Additional styles */
-    margin-top: 10px; /* Add some space above the link */
-    font-size: 14px; /* Adjust the font size */
-    cursor: pointer; /* Set the cursor style to pointer */
-  }
+.zoom-button {
+  background-color: rgba(0, 0, 128, 0.3); /* Adjust the alpha value as needed */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#draggable {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  cursor: grab; /* Set the cursor to indicate draggable element */
+}
+
+/* Style for the footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Style for Arabic text */
+.arabic {
+  direction: rtl;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style for English text */
+.english {
+  direction: ltr;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style for articles container */
+.articles {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Style for each article */
+.article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: end;
+  align-items: end;
+}
+
+/* Style for the Arabic news reading exercise instructions */
+.instructions {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
 
-  
-  .articles {
-    max-height: calc(100vh - 150px); /* Adjust the value based on your design */
-    overflow-y: auto;
-  max-height: calc(100vh - 150px); /* Adjust the value based on your design */
-    overflow-y: auto;
-    margin-bottom: 50px; /* Add space for the fixed footer */
-    padding: 10px; /* Add your desired padding value */
-    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
-    margin-bottom: 20px; /* Add some space between articles */
-  }
+/* Style the navigation bar */
+nav {
+  background-color: #000080;
+  color: #F5F5DC;
+  padding: 10px 0;
+}
 
- 
+/* Center the navigation items horizontally */
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+/* Style each navigation item */
+li {
+  margin: 0 15px;
+}
+
+/* Add styling to the links */
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Style the navigation icon */
+i {
+  margin-right: 5px;
+}
+
+/* Common Footer Styles */
+.fixed-footer {
+  background-color: #000080;
+  color: #D2B48C;
+  padding: 1px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fixed-footer a:hover {
+  color: #ffc107; /* Change the color on hover */
+}
+
+
+.english {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
